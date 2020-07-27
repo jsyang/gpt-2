@@ -13,6 +13,16 @@ See more details in our [blog post](https://blog.openai.com/better-language-mode
 
 This repository is meant to be a starting point for researchers and engineers to experiment with GPT-2.
 
+### Install
+
+```
+pip3 install -r requirements.txt
+# https://github.com/openai/gpt-2/issues/189
+pip3 install tensorflow==1.14.0
+python3 download_model.py 1558M
+
+```
+
 ### Some caveats
 
 - GPT-2 models' robustness and worst case behaviors are not well-understood.  As with any machine-learned model, carefully evaluate GPT-2 for your use case, especially if used without fine-tuning or in safety-critical applications where reliability is important.

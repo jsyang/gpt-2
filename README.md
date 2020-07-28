@@ -20,7 +20,17 @@ pip3 install -r requirements.txt
 # https://github.com/openai/gpt-2/issues/189
 pip3 install tensorflow==1.14.0
 python3 download_model.py 1558M
+```
 
+```
+# https://huggingface.co/blog/how-to-generate#top-k-sampling
+# In Top-K sampling, the K most likely next words are filtered and the probability mass is redistributed among only those K next words. GPT2 adopted this sampling scheme, which was one of the reasons for its success in story generation.
+
+# top_k         = choose only from this number of the top most likely next words as branch
+# model_name    = which named/sized GPT2 model to use
+# length        = max length of returned tokens (how many words you get back)
+
+python3 src/interactive_conditional_samples.py --top_k 40 --model_name 1558M --length 25
 ```
 
 ### Some caveats
